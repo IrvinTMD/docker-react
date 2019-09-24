@@ -6,4 +6,4 @@ before_install:
   - docker build -t irvintmd/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run irvintmd/docker-react npm run test -- --coverage
+  - docker run -e CI=true irvintmd/docker-react npm run test
